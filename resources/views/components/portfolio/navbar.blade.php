@@ -1,8 +1,5 @@
-{{-- Base : Bleu nuit — #0F172A
-Accent 1 : Cyan — #22D3EE
-Accent 2 : Gris clair — #E5E7EB --}}
-
 <nav x-data="{
+    open: false,
     activeSection: 'hero',
     spy() {
         const sections = ['hero', 'about', 'skills', 'projects', 'contact'];
@@ -13,48 +10,48 @@ Accent 2 : Gris clair — #E5E7EB --}}
             }
         }
     }
-}" @scroll.window="spy()"
-    class="fixed top-0 z-50 w-full bg-[#0f172a]/60 backdrop-blur-md border-b border-[#e5e7eb]/20">
+}" @scroll.window="spy()" class="fixed top-0 z-50 w-full bg-[#222733]/60 backdrop-blur-md">
     <div class="mx-auto px-4 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
 
             <div class="flex shrink-0 items-center">
                 <a href="/"
                     class="text-xl font-bold text-white tracking-tighter hover:opacity-80 transition-opacity">
-                    LOGO
+                    Avatar
                 </a>
             </div>
 
             <div class="hidden sm:ml-6 sm:block">
                 <div class="flex items-center space-x-1">
 
-                    <a href="#hero" @click="activeSection = 'hero'"
+                    <a href="#hero"
+                        @click="document.getElementById('mobile-menu').hidden = true; activeSection = 'hero'"
                         :class="activeSection === 'hero' ? 'border-1 border-[#fff]' : 'border-2 border-transparent'"
-                        class="rounded-md px-3 py-2 text-sm font-medium text-[#fff] hover:bg-[#22d3ee] hover:text-[#0f172a] transition-all focus-visible:outline-2 focus-visible:outline-white"
+                        class=" px-3 py-2 text-sm font-medium text-[#fff] hover:text-[#22d3ee] transition-all focus-visible:outline-2 focus-visible:outline-white"
                         aria-current="page">
                         Accueil
                     </a>
 
                     <a href="#about" @click="activeSection = 'about'"
                         :class="activeSection === 'about' ? 'border-1 border-[#fff]' : 'border-2 border-transparent'"
-                        class="rounded-md px-3 py-2 text-sm font-medium text-[#fff] hover:bg-[#22d3ee] hover:text-[#0f172a] transition-all focus-visible:outline-2 focus-visible:outline-white">À
+                        class=" px-3 py-2 text-sm font-medium text-[#fff] hover:text-[#22d3ee] transition-all focus-visible:outline-2 focus-visible:outline-white">À
                         Propos
                     </a>
 
                     <a href="#skills" @click="activeSection = 'skills'"
                         :class="activeSection === 'skills' ? 'border-1 border-[#fff]' : 'border-2 border-transparent'"
-                        class="rounded-md px-3 py-2 text-sm font-medium text-[#fff] hover:bg-[#22d3ee] hover:text-[#0f172a] transition-all focus-visible:outline-2 focus-visible:outline-white">
+                        class=" px-3 py-2 text-sm font-medium text-[#fce5e5] hover:text-[#22d3ee] transition-all focus-visible:outline-2 focus-visible:outline-white">
                         Compétences
                     </a>
 
                     <a href="#projects"@click="activeSection = 'projects'"
                         :class="activeSection === 'projects' ? 'border-1 border-[#fff]' : 'border-2 border-transparent'"
-                        class="rounded-md px-3 py-2 text-sm font-medium text-[#fff] hover:bg-[#22d3ee] hover:text-[#0f172a] transition-all focus-visible:outline-2 focus-visible:outline-white">
+                        class=" px-3 py-2 text-sm font-medium text-[#fff] hover:text-[#22d3ee] transition-all focus-visible:outline-2 focus-visible:outline-white">
                         Projets
                     </a>
                     <a href="#contact"@click="activeSection = 'contact'"
                         :class="activeSection === 'contact' ? 'border-1 border-[#fff]' : 'border-2 border-transparent'"
-                        class="rounded-md px-3 py-2 text-sm font-medium text-[#fff] hover:bg-[#22d3ee] hover:text-[#0f172a] transition-all focus-visible:outline-2 focus-visible:outline-white">
+                        class=" px-3 py-2 text-sm font-medium text-[#fff] hover:text-[#22d3ee] transition-all focus-visible:outline-2 focus-visible:outline-white">
                         Contact
                     </a>
                 </div>
@@ -81,33 +78,34 @@ Accent 2 : Gris clair — #E5E7EB --}}
     <el-disclosure id="mobile-menu" hidden class="sm:hidden bg-black border-t border-white/10">
         <div class="flex flex-col items-center space-y-1 px-4 pt-2 pb-6">
 
-            <a href="#hero" @click="activeSection = 'hero'"
+            <a href="#hero"
+                @click="document.getElementById('mobile-menu').setAttribute('hidden', ''); activeSection = 'hero'"
                 :class="activeSection === 'hero' ? 'border-1 border-[#fff]' : 'border-2 border-transparent'"
-                class="w-fit rounded-md hover:bg-[#22d3ee] hover:text-[#0f172a] px-3 py-3 text-base font-medium text-center text-[#fff]" aria-current="page">
+                class=" px-3 py-3 hover:text-[#22d3ee] text-center text-[#fff]">
                 Accueil
             </a>
 
             <a href="#about" @click="activeSection = 'about'"
-                        :class="activeSection === 'about' ? 'border-1 border-[#fff]' : 'border-2 border-transparent'"
-                class="w-fit rounded-md px-3 py-3 text-base font-medium text-center text-[#fff] hover:bg-[#22d3ee] hover:text-[#0f172a]">À
-                Propos
+                :class="activeSection === 'about' ? 'border-1 border-[#fff]' : 'border-2 border-transparent'"
+                class=" px-3 py-3 text-center text-[#fff] hover:text-[#22d3ee]">
+                À Propos
             </a>
 
             <a href="#skills" @click="activeSection = 'skills'"
-                        :class="activeSection === 'skills' ? 'border-1 border-[#fff]' : 'border-2 border-transparent'"
-                class="w-fit rounded-md px-3 py-3 text-base font-medium text-center text-[#fff] hover:bg-[#22d3ee] hover:text-[#0f172a]">
+                :class="activeSection === 'skills' ? 'border-1 border-[#fff]' : 'border-2 border-transparent'"
+                class=" px-3 py-3 text-center text-[#fff] hover:text-[#22d3ee]">
                 Compétences
             </a>
 
             <a href="#projects" @click="activeSection = 'projects'"
-                        :class="activeSection === 'projects' ? 'border-1 border-[#fff]' : 'border-2 border-transparent'"
-                class="w-fit rounded-md px-3 py-3 text-base font-medium text-center text-[#fff] hover:bg-[#22d3ee] hover:text-[#0f172a]">
+                :class="activeSection === 'projects' ? 'border-1 border-[#fff]' : 'border-2 border-transparent'"
+                class=" px-3 py-3  text-center text-[#fff] hover:text-[#22d3ee]">
                 Projets
             </a>
 
             <a href="#contact" @click="activeSection = 'contact'"
-                        :class="activeSection === 'contact' ? 'border-1 border-[#fff]' : 'border-2 border-transparent'"
-                class="w-fit rounded-md px-3 py-3 text-base font-medium text-center text-[#fff] hover:bg-[#22d3ee] hover:text-[#0f172a]">
+                :class="activeSection === 'contact' ? 'border-1 border-[#fff]' : 'border-2 border-transparent'"
+                class=" px-3 py-3 text-center text-[#fff] hover:text-[#22d3ee]">
                 Contact
             </a>
         </div>
