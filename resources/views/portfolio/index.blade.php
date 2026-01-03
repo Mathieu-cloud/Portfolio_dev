@@ -19,7 +19,7 @@ xl	80rem (1280px)	@media (width >= 80rem) { ... }
 
 <body class="antialiased text-gray-200">
     <header>
-        < x-portfolio.navbar />
+        < x-portfolios.nav />
     </header>
 
     <main class="bg-[#2e3445]">
@@ -58,52 +58,69 @@ xl	80rem (1280px)	@media (width >= 80rem) { ... }
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
 
                     <div
-                        class="bg-gradient-to-br from-cyan-500 to-blue-600 p-6 md:p-8 shadow-2xl transform transition-all hover:scale-105 border-2 border-white/30 rounded-xl">
+                        class="bg-gradient-to-br from-cyan-500 to-blue-900 p-6 md:p-8 shadow-2xl transform transition-all hover:scale-105 border-2 border-white/50 rounded-xl">
                         <div class="flex justify-center mb-4">
-                            <x-icons.front-end class="w-12 h-12 text-black" />
+                            <x-icons.front-end class="w-12 h-12 text-[#2e3445]" />
                         </div>
                         <h3
-                            class="text-2xl md:text-3xl mb-6 text-white text-center font-black uppercase tracking-tight">
+                            class="text-2xl md:text-3xl mb-6 text-[#dbe6cb] text-center font-black uppercase tracking-tight">
                             Frontend</h3>
-                        <div class="space-y-4">
+                        <div class="space-y-4 text-center">
 
-                            <img class="w-12 h-12"
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" />
+                            <i class="devicon-html5-plain text-4xl text-[#dbe6cb] p-2" title="html 5"></i>
 
+                            <i class="devicon-css3-plain text-4xl text-[#dbe6cb] p-2" title="css 3"></i>
+
+                            <i class="devicon-sass-original text-4xl text-[#dbe6cb] p-2" title="Sass"></i>
+
+                            <i class="devicon-tailwindcss-original text-4xl text-[#dbe6cb] p-2" title="tailwind"></i>
+
+                            <i class="devicon-javascript-plain text-4xl text-[#dbe6cb] p-2" title="javascript"></i>
+
+                            <i class="devicon-vuejs-plain text-4xl text-[#dbe6cb] p-2" title="VueJs"></i>
+
+                            <i class="devicon-jquery-plain text-4xl text-[#dbe6cb] p-2" title="jQuery"></i>
+
+                            <i class="devicon-alpinejs-original text-4xl text-[#dbe6cb] p-2" title="Alpine.js"></i>
                         </div>
                     </div>
 
                     <div
-                        class="bg-gradient-to-br from-fuchsia-500 to-purple-600 p-6 md:p-8 shadow-2xl transform transition-all hover:scale-105 border-2 border-white/30 rounded-xl">
+                        class="bg-gradient-to-br from-fuchsia-500 to-purple-900 p-6 md:p-8 shadow-2xl transform transition-all hover:scale-105 border-2 border-white/30 rounded-xl">
                         <div class="flex justify-center mb-4">
-                            <x-icons.back-end class="w-12 h-12 text-black" />
+                            <x-icons.back-end class="w-12 h-12 text-[#2e3445]" />
                         </div>
                         <h3
-                            class="text-2xl md:text-3xl mb-6 text-white text-center font-black uppercase tracking-tight">
+                            class="text-2xl md:text-3xl mb-6 text-[#dbe6cb] text-center font-black uppercase tracking-tight">
                             Backend</h3>
-                        <div class="space-y-4">
-                            <ul class="text-white/90 text-center font-medium">
-                                <li>Node.js</li>
-                                <li>PostgreSQL</li>
-                                <li>API REST</li>
-                            </ul>
+                        <div class="space-y-4 text-center">
+
+                            <i class="devicon-php-plain text-4xl text-[#dbe6cb]" title="php"></i>
+
+                            <i class="devicon-csharp-plain text-4xl text-[#dbe6cb]" title="C#"></i>
+
+                            <i class="devicon-mysql-original text-4xl text-[#dbe6cb]" title="MySQL"></i>
+
+                            <i class="devicon-azuresqldatabase-plain text-4xl text-[#dbe6cb]" title="SQL"></i>
+
+                            <i class="devicon-sqlite-plain text-4xl text-[#dbe6cb]" title="SQLite"></i>
+
+                            <i class="devicon-laravel-original text-4xl text-[#dbe6cb]" title="Laravel"></i>
                         </div>
                     </div>
 
                     <div
-                        class="bg-gradient-to-br from-lime-500 to-green-600 p-6 md:p-8 shadow-2xl transform transition-all hover:scale-105 border-2 border-white/30 rounded-xl">
+                        class="bg-gradient-to-br from-lime-500 to-green-900 p-6 md:p-8 shadow-2xl transform transition-all hover:scale-105 border-2 border-white/30 rounded-xl">
                         <div class="flex justify-center mb-4">
-                            <x-icons.tools class="w-12 h-12 text-black" />
+                            <x-icons.tools class="w-12 h-12 text-[#2e3445]" />
                         </div>
                         <h3
-                            class="text-2xl md:text-3xl mb-6 text-white text-center font-black uppercase tracking-tight">
+                            class="text-2xl md:text-3xl mb-6 text-[#dbe6cb] text-center font-black uppercase tracking-tight">
                             Technologies</h3>
-                        <div class="space-y-4">
-                            <ul class="text-white/90 text-center font-medium">
-                                <li>Git / GitHub</li>
-                                <li>Docker</li>
-                                <li>Figma</li>
-                            </ul>
+                        <div class="space-y-4 text-center">
+
+                            <i class="devicon-git-plain text-4xl text-[#dbe6cb]" title="git"></i>
+
                         </div>
                     </div>
 
