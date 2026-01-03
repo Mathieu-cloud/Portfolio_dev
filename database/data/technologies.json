@@ -1,0 +1,17 @@
+[
+    { "nom": "HTML" },
+    { "nom": "CSS" },
+    { "nom": "Sass" },
+    { "nom": "Tailwind css" },
+    { "nom": "Javascript" },
+    { "nom": "Vue.js" },
+    { "nom": "jQuery" },
+    { "nom": "Alpine.js" },
+    { "nom": "php" },
+    { "nom": "C#" },
+    { "nom": "MySql" },
+    { "nom": "SQL" },
+    { "nom": "SQLite" },
+    { "nom": "Laravel" },
+    { "nom": "git" }
+]
