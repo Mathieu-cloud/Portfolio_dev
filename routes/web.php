@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProjetController;
+use App\Livewire\CreateProjectForm;
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Features;
 use Livewire\Volt\Volt;
@@ -7,6 +9,14 @@ use Livewire\Volt\Volt;
 Route::get('/', function () {
     return view('portfolio/index');
 })->name('home');
+
+Route::get('/admins/projects/create', [ProjetController::class, 'create'])
+    ->name('admins.projects.create')
+    ->middleware('auth', 'verified');
+
+Route::post('/projects', [ProjetController::class, 'store'])
+    ->name('projects.store')
+    ->middleware('auth', 'verified');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])

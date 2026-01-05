@@ -7,8 +7,13 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Projet extends Model
 {
+    protected $fillable = ['nom', 'description','image','lien'];
+
+
     public function technologies(): BelongsToMany
     {
-        return $this->belongsToMany(Technologies::class);
+        return $this->belongsToMany(Technologie::class);
     }
+
+
 }

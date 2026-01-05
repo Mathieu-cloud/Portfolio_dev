@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Projet;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProjetController extends Controller
 {
@@ -20,17 +21,49 @@ class ProjetController extends Controller
      */
     public function create()
     {
-        //
+        return view("admins.projects.create");
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        //
+ public function store(Request $request)
+{
+    // 1. Validation (inchangée)
+    $request->validate([
+        'name' => 'required',
+        'description' => 'required',
+        'image' => 'required|image|mimes:jpg,png,jpeg|max:2048',
+        'link' => 'nullable|url',
+    ]);
+
+    // 2. Vérification et Sauvegarde alternative
+    if ($request->hasFile('image') && $request->file('image')->isValid()) {
+        $file = $request->file('image');
+
+        // Génère un nom unique : ex 16728394.jpg
+        $fileName = time() . '.' . $file->getClientOriginalExtension();
+
+        // Déplace le fichier directement dans public/uploads/projects
+        // Cette méthode "move" est plus fiable sur Windows/Herd
+        $file->move(public_path('uploads/projects'), $fileName);
+
+        // Le chemin qu'on stocke en base de données
+        $imagePath = 'uploads/projects/' . $fileName;
+    } else {
+        return back()->withErrors(['image' => "Erreur lors du transfert du fichier."]);
     }
 
+    // 3. Création en base de données
+    \App\Models\Projet::create([
+        'nom' => $request->name,
+        'description' => $request->description,
+        'image' => $imagePath,
+        'lien' => $request->link,
+    ]);
+
+    return redirect()->route('dashboard')->with('success', 'Projet créé avec succès !');
+}
     /**
      * Display the specified resource.
      */

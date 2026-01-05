@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Technologie;
 use App\Models\Technologies;
 use Illuminate\Http\Request;
 
@@ -34,7 +35,7 @@ class TechnologiesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Technologies $technologies)
+    public function show(Technologie $technologies)
     {
         //
     }
@@ -42,7 +43,7 @@ class TechnologiesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Technologies $technologies)
+    public function edit(Technologie $technologies)
     {
         //
     }
@@ -50,7 +51,7 @@ class TechnologiesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Technologies $technologies)
+    public function update(Request $request, Technologie $technologies)
     {
         //
     }
@@ -58,7 +59,7 @@ class TechnologiesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Technologies $technologies)
+    public function destroy(Technologie $technologies)
     {
         //
     }
