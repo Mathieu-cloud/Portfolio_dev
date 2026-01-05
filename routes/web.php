@@ -7,7 +7,7 @@ use Laravel\Fortify\Features;
 use Livewire\Volt\Volt;
 
 Route::get('/', function () {
-    return view('portfolio/index');
+    return view('index');
 })->name('home');
 
 Route::get('/admins/projects/create', [ProjetController::class, 'create'])

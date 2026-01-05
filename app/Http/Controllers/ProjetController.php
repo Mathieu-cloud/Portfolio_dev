@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Projet;
+use App\Models\Technologie;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -21,7 +22,8 @@ class ProjetController extends Controller
      */
     public function create()
     {
-        return view("admins.projects.create");
+        $technologies = Technologie::orderBy('nom', 'asc')->get();
+        return view("admins.projects.create", compact('technologies') );
     }
 
     /**
@@ -35,6 +37,8 @@ class ProjetController extends Controller
         'description' => 'required',
         'image' => 'required|image|mimes:jpg,png,jpeg|max:2048',
         'link' => 'nullable|url',
+        'technologies' => 'required|array', // Validation du tableau de IDs
+        'technologies.*' => 'exists:technologies,id', // Vérifie que chaque ID existe
     ]);
 
     // 2. Vérification et Sauvegarde alternative
@@ -55,12 +59,15 @@ class ProjetController extends Controller
     }
 
     // 3. Création en base de données
-    \App\Models\Projet::create([
+   $projet = Projet::create([
         'nom' => $request->name,
         'description' => $request->description,
         'image' => $imagePath,
         'lien' => $request->link,
     ]);
+
+    // 4. Association des technologies
+    $projet->technologies()->attach($request->technologies);
 
     return redirect()->route('dashboard')->with('success', 'Projet créé avec succès !');
 }

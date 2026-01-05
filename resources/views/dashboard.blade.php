@@ -1,26 +1,22 @@
 <x-layouts.app :title="__('Dashboard')">
-    <div class="flex h-full w-full flex-1 flex-col gap-4 rounded-xl">
-        <div class="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div class="relative aspect-video overflow-hidden  border border-neutral-200 dark:border-neutral-700">
-                <x-placeholder-pattern
-                    class="absolute inset-0 size-full stroke-gray-900/20 dark:stroke-neutral-100/20 pointer-events-none" />
-                <a href="{{ route('admins.projects.create') }}">
-                    Créer un projet
-                </a>
+    <div class="space-y-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <div class="flex justify-between items-center">
+            <div>
+                <h2 class="text-2xl font-bold text-white">Mes projets</h2>
+                <p class="text-gray-400 text-sm">Gérez vos réalisations affichées sur le portfolio.</p>
             </div>
-            <div
-                class="relative aspect-video overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700">
-                <x-placeholder-pattern
-                    class="absolute inset-0 size-full stroke-gray-900/20 dark:stroke-neutral-100/20" />
-            </div>
-            <div
-                class="relative aspect-video overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700">
-                <x-placeholder-pattern
-                    class="absolute inset-0 size-full stroke-gray-900/20 dark:stroke-neutral-100/20" />
-            </div>
+
+            <a href="{{ route('admins.projects.create') }}"
+               class="inline-flex items-center px-4 py-2 bg-indigo-900 hover:bg-indigo-800 text-white font-semibold rounded-lg shadow transition-all duration-200">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                Créer un projet
+            </a>
         </div>
-        <div class="relative h-full flex-1 overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700">
-            <x-placeholder-pattern class="absolute inset-0 size-full stroke-gray-900/20 dark:stroke-neutral-100/20" />
-        </div>
+
+        <hr class="border-gray-800">
+
+        <livewire:project-list />
+
     </div>
 </x-layouts.app>
