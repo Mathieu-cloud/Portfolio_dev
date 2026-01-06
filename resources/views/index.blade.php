@@ -23,9 +23,10 @@ xl	80rem (1280px)	@media (width >= 80rem) { ... }
     </header>
 
     <main class="bg-[#2e3445]">
-        <div class="relative">
+        {{-- Section hero --}}
+        <section class="relative">
             <div id="hero" class="relative -top-24"></div>
-            <section class="flex flex-col items-center justify-start pt-30">
+            <div class="flex flex-col items-center justify-start pt-30">
                 <div class="relative z-10 text-center">
                     <h1
                         class="pt-15 text-[3.25rem] sm:text-[6rem] leading-[1.1] text-[#dbe6cb] font-light flex flex-col">
@@ -36,15 +37,17 @@ xl	80rem (1280px)	@media (width >= 80rem) { ... }
                         <span>DÉVELOPPEUR WEB FULL-STACK</span>
                     </p>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
 
+        {{-- Section à propos --}}
         <section id="about" class="flex flex-col items-center justify-start overflow-hidden scroll-mt-80 pt-20">
             <h2 class="">
                 À propos
             </h2>
         </section>
 
+        {{-- Section compétences --}}
         <section id="skills"
             class="flex flex-col items-center justify-start overflow-hidden scroll-mt-20 py-12 md:py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
@@ -127,11 +130,15 @@ xl	80rem (1280px)	@media (width >= 80rem) { ... }
                 </div>
             </div>
         </section>
+        {{-- Section projets --}}
         <section id="projects" class="flex flex-col items-center justify-start overflow-hidden scroll-mt-80 pt-20">
-            <h2 class="">
+            <h2 class="text-3xl font-bold text-white mb-10">
                 PROJETS
             </h2>
+             <livewire:project-list />
         </section>
+
+        {{-- Section contact --}}
         <section id="contact" class="flex flex-col items-center justify-start overflow-hidden scroll-mt-80 pt-20">
             <h2 class="">
                 CONTACTEZ-MOI
