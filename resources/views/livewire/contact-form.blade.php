@@ -1,6 +1,6 @@
 <div class="w-full">
     <form wire:submit="sendToGmail"
-        class="bg-white/5 backdrop-blur-sm p-6 md:p-10 rounded-3xl border border-white/10 shadow-2xl space-y-6">
+        class="bg-white/5 backdrop-blur-sm p-6 md:p-10 rounded-md border border-white/10 shadow-2xl space-y-6">
 
         @if (session()->has('success'))
             <div

@@ -24,24 +24,23 @@ xl	80rem (1280px)	@media (width >= 80rem) { ... }
 
     <main class="bg-[#2e3445]">
         {{-- Section hero --}}
-        <section class="relative">
-            <div id="hero" class="relative -top-24"></div>
-            <div class="flex flex-col items-center justify-start pt-30">
-                <div class="relative z-10 text-center">
-                    <h1
-                        class="pt-15 text-[3.25rem] sm:text-[6rem] leading-[1.1] text-[#dbe6cb] font-light flex flex-col">
-                        <span>Mathieu</span>
-                        <span>Moreau</span>
-                    </h1>
-                    <p class="text-[1.875rem] sm:text-[2.25rem] mt-4 text-[#fff] flex flex-col sm:block">
-                        <span>DÉVELOPPEUR WEB FULL-STACK</span>
-                    </p>
-                </div>
+        <section id="hero"
+            class="flex flex-col items-center justify-center relative overflow-hidden scroll-mt-20 py-20">
+            <div class="relative z-10 text-center">
+                <h1 class="pt-15 text-[3.25rem] sm:text-[6rem] leading-[1.1] text-[#dbe6cb] font-light flex flex-col">
+                    <span>Mathieu</span>
+                    <span>Moreau</span>
+                </h1>
+                <p class="text-[1.875rem] sm:text-[2.25rem] mt-4 text-[#fff] flex flex-col sm:block">
+                    <span>DÉVELOPPEUR WEB</span>
+                </p>
             </div>
+
         </section>
 
         {{-- Section à propos --}}
-        <section id="about" class="flex flex-col items-center justify-start overflow-hidden scroll-mt-80 pt-20">
+        <section id="about"
+            class="flex flex-col items-center justify-start overflow-hidden scroll-mt-80 py-20 bg-[#242936]">
             <h2 class="">
                 À propos
             </h2>
@@ -49,7 +48,7 @@ xl	80rem (1280px)	@media (width >= 80rem) { ... }
 
         {{-- Section compétences --}}
         <section id="skills"
-            class="flex flex-col items-center justify-start overflow-hidden scroll-mt-20 py-12 md:py-20">
+            class="flex flex-col items-center justify-start overflow-hidden scroll-mt-20 py-20 md:py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
 
                 <div class="text-center mb-10 md:mb-16">
@@ -131,7 +130,8 @@ xl	80rem (1280px)	@media (width >= 80rem) { ... }
             </div>
         </section>
         {{-- Section projets --}}
-        <section id="projects" class="flex flex-col items-center justify-start overflow-hidden scroll-mt-80 pt-20">
+        <section id="projects"
+            class="flex flex-col items-center justify-start overflow-hidden scroll-mt-80 py-20 bg-[#242936]">
             <h2 class="text-3xl font-bold text-white mb-10">
                 PROJETS
             </h2>
@@ -140,7 +140,7 @@ xl	80rem (1280px)	@media (width >= 80rem) { ... }
 
         {{-- Section contact --}}
         <section id="contact"
-            class="flex flex-col items-center justify-start overflow-hidden scroll-mt-20 py-12 md:py-20 bg-[#242936]">
+            class="flex flex-col items-center justify-start overflow-hidden scroll-mt-20 py-12 md:py-20">
             <div class="max-w-4xl mx-auto px-4 w-full relative">
                 <div class="text-center mb-12">
                     <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-4 uppercase tracking-tighter">
