@@ -16,8 +16,7 @@
                     </ul>
                 </div>
             @endif
-
-            {{-- Changement de l'action vers UPDATE et ajout de @method('PUT') --}}
+            {{-- Formulaire de modification de projet --}}
             <form action="{{ route('admins.projects.update', ['id' => $project->id]) }}" method="POST"
                 enctype="multipart/form-data" class="space-y-6">
                 @csrf
@@ -51,17 +50,30 @@
                 </div>
                 {{-- Technologies --}}
                 <div>
-                    <label for="technologies" class="block text-sm font-semibold text-gray-300 mb-1">Technologies
-                        utilisées</label>
-                    <select name="technologies[]" id="technologies" multiple required
-                        class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-indigo-500 outline-none transition-all">
+                    <label class="block text-sm font-semibold text-gray-300 mb-3">
+                        Technologies utilisées
+                    </label>
+
+                    <div
+                        class="grid grid-cols-2 sm:grid-cols-3 gap-4 p-4 bg-gray-800 border border-gray-600 rounded-lg">
                         @foreach ($technologies as $tech)
-                            <option value="{{ $tech->id }}" {{-- On sélectionne les technos déjà associées --}}
-                                @if (in_array($tech->id, old('technologies', $project->technologies->pluck('id')->toArray()))) selected @endif>
-                                {{ $tech->nom }}
-                            </option>
+                            <div class="flex items-center space-x-3">
+                                <input type="checkbox" name="technologies[]" id="tech-{{ $tech->id }}"
+                                    value="{{ $tech->id }}" {{-- Logique pour cocher la case : soit l'ancienne valeur (validation), soit la base de données --}}
+                                    @if (in_array($tech->id, old('technologies', $project->technologies->pluck('id')->toArray()))) checked @endif
+                                    class="w-4 h-4 text-indigo-600 bg-gray-700 border-gray-500 rounded focus:ring-indigo-500 focus:ring-offset-gray-800">
+
+                                <label for="tech-{{ $tech->id }}"
+                                    class="text-sm text-gray-300 cursor-pointer hover:text-white transition-colors">
+                                    {{ $tech->nom }}
+                                </label>
+                            </div>
                         @endforeach
-                    </select>
+                    </div>
+
+                    @error('technologies')
+                        <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+                    @enderror
                 </div>
                 {{-- Lien du projet --}}
                 <div>
