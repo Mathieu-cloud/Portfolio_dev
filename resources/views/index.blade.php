@@ -135,14 +135,28 @@ xl	80rem (1280px)	@media (width >= 80rem) { ... }
             <h2 class="text-3xl font-bold text-white mb-10">
                 PROJETS
             </h2>
-             <livewire:project-list />
+            <livewire:project-list />
         </section>
 
         {{-- Section contact --}}
-        <section id="contact" class="flex flex-col items-center justify-start overflow-hidden scroll-mt-80 pt-20">
-            <h2 class="">
-                CONTACTEZ-MOI
-            </h2>
+        <section id="contact"
+            class="flex flex-col items-center justify-start overflow-hidden scroll-mt-20 py-12 md:py-20 bg-[#242936]">
+            <div class="max-w-4xl mx-auto px-4 w-full relative">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-4 uppercase tracking-tighter">
+                        Contact
+                    </h2>
+                    <p class="text-[#dbe6cb] text-lg"></p>
+                </div>
+
+                <div class="relative z-10 max-w-2xl mx-auto">
+                    <livewire:contact-form />
+                </div>
+
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-lime-500/10 blur-[120px] -z-10">
+                </div>
+            </div>
         </section>
     </main>
 </body>
