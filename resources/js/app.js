@@ -1,4 +1,7 @@
 import '@tailwindplus/elements';
-import { Livewire, Alpine } from '../../vendor/livewire/livewire/dist/livewire.esm';
+import heroAnimation from './hero';
 
-Livewire.start();
+document.addEventListener('alpine:init', () => {
+    Alpine.data('heroAnimation', heroAnimation);
+});
+

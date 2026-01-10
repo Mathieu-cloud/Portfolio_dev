@@ -13,5 +13,7 @@
     { "nom": "SQL" },
     { "nom": "SQLite" },
     { "nom": "Laravel" },
-    { "nom": "git" }
+    { "nom": "git" },
+    { "nom": "GitHub" },
+    { "nom": "Livewire" }
 ]

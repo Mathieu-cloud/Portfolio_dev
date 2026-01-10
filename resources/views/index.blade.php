@@ -22,25 +22,13 @@ xl	80rem (1280px)	@media (width >= 80rem) { ... }
         < x-portfolios.nav />
     </header>
 
-    <main class="bg-[#2e3445]">
+    <main class="bg-[#242936]">
         {{-- Section hero --}}
-        <section id="hero"
-            class="flex flex-col items-center justify-center relative overflow-hidden scroll-mt-20 py-20">
-            <div class="relative z-10 text-center">
-                <h1 class="pt-15 text-[3.25rem] sm:text-[6rem] leading-[1.1] text-[#dbe6cb] font-light flex flex-col">
-                    <span>Mathieu</span>
-                    <span>Moreau</span>
-                </h1>
-                <p class="text-[1.875rem] sm:text-[2.25rem] mt-4 text-[#fff] flex flex-col sm:block">
-                    <span>DÉVELOPPEUR WEB</span>
-                </p>
-            </div>
-
-        </section>
+        <livewire:hero-animation />
 
         {{-- Section à propos --}}
         <section id="about"
-            class="flex flex-col items-center justify-start overflow-hidden scroll-mt-80 py-20 bg-[#242936]">
+            class="flex flex-col items-center justify-start overflow-hidden scroll-mt-80 py-20">
             <h2 class="">
                 À propos
             </h2>
@@ -131,7 +119,7 @@ xl	80rem (1280px)	@media (width >= 80rem) { ... }
         </section>
         {{-- Section projets --}}
         <section id="projects"
-            class="flex flex-col items-center justify-start overflow-hidden scroll-mt-80 py-20 bg-[#242936]">
+            class="flex flex-col items-center justify-start overflow-hidden scroll-mt-80 py-20 ">
             <h2 class="text-3xl font-bold text-white mb-10">
                 PROJETS
             </h2>
