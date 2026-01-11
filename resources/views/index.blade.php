@@ -20,15 +20,16 @@
         <livewire:hero-animation />
 
         {{-- Section à propos --}}
-        <section id="about" class="flex flex-col items-center justify-start  min-h-screen scroll-mt-20 py-12 md:py-20">
-             <div class="text-center mb-16 md:mb-24">
-                    <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white">
-                       À <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Propos</span>
-                    </h2>
-                    <div class="h-1.5 w-24 bg-gradient-to-r from-blue-500 to-emerald-500 mx-auto mt-6 rounded-full">
-                    </div>
+        <section id="about"
+            class="flex flex-col items-center justify-start  min-h-screen scroll-mt-20 py-12 md:py-20">
+            <div class="text-center mb-16 md:mb-24">
+                <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white">
+                    À <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Propos</span>
+                </h2>
+                <div class="h-1.5 w-24 bg-gradient-to-r from-blue-500 to-emerald-500 mx-auto mt-6 rounded-full">
                 </div>
+            </div>
         </section>
 
         {{-- Section compétences --}}
@@ -131,38 +132,86 @@
         <section id="projects"
             class="flex flex-col items-center justify-start  min-h-screen scroll-mt-20 py-12 md:py-20">
 
-              <div class="text-center mb-16 md:mb-24">
-                    <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white">
-                        Mes <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Projets</span>
-                    </h2>
-                    <div class="h-1.5 w-24 bg-gradient-to-r from-blue-500 to-emerald-500 mx-auto mt-6 rounded-full">
-                    </div>
+            <div class="text-center mb-16 md:mb-24">
+                <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white">
+                    Mes <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Projets</span>
+                </h2>
+                <div class="h-1.5 w-24 bg-gradient-to-r from-blue-500 to-emerald-500 mx-auto mt-6 rounded-full">
                 </div>
+            </div>
             <livewire:project-list />
 
         </section>
 
         {{-- Section contact --}}
         <section id="contact"
-            class="flex flex-col items-center justify-start overflow-hidden scroll-mt-20 py-12 md:py-20">
-            <div class="max-w-4xl mx-auto px-4 w-full relative">
-                <div class="text-center mb-12">
-                   <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white">
-                        <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Contact</span>
+            class="flex flex-col items-center justify-start min-h-screen scroll-mt-20 py-16 md:py-24 relative overflow-hidden">
+            <div class="max-w-6xl mx-auto px-6 w-full relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white">
+                        Contact
                     </h2>
-                    <div class="h-1.5 w-24 bg-gradient-to-r from-blue-500 to-emerald-500 mx-auto mt-6 rounded-full">
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+                    <div class="relative group">
+                        <div>
+                            <livewire:contact-form />
+                        </div>
                     </div>
-                    <p class="text-[#dbe6cb] text-lg"></p>
-                </div>
 
-                <div class="relative z-10 max-w-2xl mx-auto">
-                    <livewire:contact-form />
-                </div>
+                    <div class="space-y-8">
+                        <div>
+                            <div class="space-y-6">
+                                <div class="flex items-center gap-4 group">
+                                    <div
+                                        class="w-12 h-12 rounded-2xl bg-lime-500/10 flex items-center justify-center text-lime-400 group-hover:bg-lime-500 group-hover:text-[#242936] transition-all duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-400 uppercase tracking-widest">Email</p>
+                                        <a href="mailto:mathieu.moreau.webdev@gmail.com"
+                                            class="text-lg text-[#dbe6cb] hover:text-white transition-colors">mathieu.moreau.webdev@gmail.com</a>
+                                    </div>
+                                </div>
 
-                <div
-                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-lime-500/10 blur-[120px] -z-10">
+                                <div class="flex items-center gap-4 group">
+                                    <div
+                                        class="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover:bg-blue-500 group-hover:text-[#242936] transition-all duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-400 uppercase tracking-widest">Localisation</p>
+                                        <p class="text-lg text-[#dbe6cb]">Saint-Sauveur, QC</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-10 pt-10 border-t  flex gap-4">
+                                <a href="#"
+                                    class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-white hover:text-[#242936] transition-all"><i
+                                        class="devicon-linkedin-plain"></i></a>
+                                <a href="#"
+                                    class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-white hover:text-[#242936] transition-all"><i
+                                        class="devicon-github-original"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </div>
             </div>
         </section>
