@@ -1,6 +1,6 @@
 <div class="w-full">
     <form wire:submit="sendToGmail"
-        class="bg-white/5 backdrop-blur-sm p-6 md:p-10 rounded-md border border-white/10 shadow-2xl space-y-6">
+        class="bg-white/5 backdrop-blur-sm p-6 md:p-10 shadow-xl space-y-6">
 
         @if (session()->has('success'))
             <div
@@ -38,10 +38,10 @@
         </div>
 
         <button type="submit" wire:loading.attr="disabled"
-            class="w-full group relative flex items-center justify-center bg-gradient-to-r from-lime-500 to-green-600 hover:from-lime-400 hover:to-green-500 text-[#2e3445] font-black py-4 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-xl">
+            class="w-full group relative flex items-center justify-center bg-gradient-to-r from-lime-500 to-green-600 hover:from-lime-400 hover:to-green-500 text-[#2e3445] font-black py-4 transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-xl">
 
             <div wire:loading.remove class="flex items-center uppercase tracking-tighter">
-                <span>Envoyer le message</span>
+                <span>Envoyer</span>
                 <svg xmlns="http://www.w3.org/2000/svg"
                     class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
                     viewBox="0 0 24 24" stroke="currentColor">
