@@ -4,32 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <title>Portfolio</title>
 </head>
 
-<body class="antialiased text-gray-200">
+<body>
     <header>
         <livewire:portfolio-nav />
     </header>
 
-    <main class="bg-[#242936]">
+    <main class="bg-background">
+
         {{-- Section hero --}}
         <livewire:hero-animation />
 
         {{-- Section à propos --}}
         <section id="about"
             class="flex flex-col items-center justify-start  min-h-screen scroll-mt-20 py-12 md:py-20">
-            <div class="text-center mb-16 md:mb-24">
-                <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white">
-                    À <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Propos</span>
-                </h2>
-                <div class="h-1.5 w-24 bg-gradient-to-r from-blue-500 to-emerald-500 mx-auto mt-6 rounded-full">
-                </div>
-            </div>
+
+            <x-section-title> À propos </x-section-title>
+
         </section>
 
         {{-- Section compétences --}}
@@ -37,14 +38,7 @@
             class="flex flex-col items-center justify-start min-h-screen scroll-mt-20 py-16 md:py-24 bg-[#242936]">
             <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
 
-                <div class="text-center mb-16 md:mb-24">
-                    <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white">
-                        Mes <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Compétences</span>
-                    </h2>
-                    <div class="h-1.5 w-24 bg-gradient-to-r from-blue-500 to-emerald-500 mx-auto mt-6 rounded-full">
-                    </div>
-                </div>
+                <x-section-title> Mes compétences </x-section-title>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
@@ -55,7 +49,7 @@
                                 class="p-4 bg-blue-500/10 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-500">
                                 <x-icons.front-end class="w-12 h-12 text-blue-400" />
                             </div>
-                            <h3 class="text-2xl font-bold mb-8 text-[#dbe6cb] uppercase tracking-widest">Frontend</h3>
+                            <x-card-title>Front-end</x-card-title>
 
                             <div class="flex flex-wrap justify-center gap-5">
                                 <i class="devicon-html5-plain text-4xl text-gray-400 hover:text-[#E34F26] transition-colors duration-300"
@@ -85,7 +79,7 @@
                                 class="p-4 bg-purple-500/10 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-500">
                                 <x-icons.back-end class="w-12 h-12 text-purple-400" />
                             </div>
-                            <h3 class="text-2xl font-bold mb-8 text-[#dbe6cb] uppercase tracking-widest">Backend</h3>
+                            <x-card-title>Back-end</x-card-title>
 
                             <div class="flex flex-wrap justify-center gap-5">
                                 <i class="devicon-php-plain text-4xl text-gray-400 hover:text-[#777BB4] transition-colors duration-300"
@@ -111,7 +105,7 @@
                                 class="p-4 bg-emerald-500/10 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-500">
                                 <x-icons.tools class="w-12 h-12 text-emerald-400" />
                             </div>
-                            <h3 class="text-2xl font-bold mb-8 text-[#dbe6cb] uppercase tracking-widest">Outils</h3>
+                            <x-card-title>Outils</x-card-title>
 
                             <div class="flex flex-wrap justify-center gap-5">
                                 <i class="devicon-git-plain text-4xl text-gray-400 hover:text-[#F05032] transition-colors duration-300"
@@ -132,14 +126,8 @@
         <section id="projects"
             class="flex flex-col items-center justify-start  min-h-screen scroll-mt-20 py-12 md:py-20">
 
-            <div class="text-center mb-16 md:mb-24">
-                <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white">
-                    Mes <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Projets</span>
-                </h2>
-                <div class="h-1.5 w-24 bg-gradient-to-r from-blue-500 to-emerald-500 mx-auto mt-6 rounded-full">
-                </div>
-            </div>
+            <x-section-title> Mes projets </x-section-title>
+
             <livewire:project-list />
 
         </section>
@@ -148,21 +136,16 @@
         <section id="contact"
             class="flex flex-col items-center justify-start min-h-screen scroll-mt-20 py-16 md:py-24 relative overflow-hidden">
             <div class="max-w-6xl mx-auto px-6 w-full relative z-10">
-                <div class="text-center mb-16">
-                    <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white">
-                        Contact
-                    </h2>
-                </div>
+
+                <x-section-title> Contact </x-section-title>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
                     <div class="relative group">
-                        <div>
-                            <livewire:contact-form />
-                        </div>
+                        <livewire:contact-form />
                     </div>
 
-                    <div class="space-y-8">
+                    <div class="space-y-8 font-heading text-blanc">
                         <div>
                             <div class="space-y-6">
                                 <div class="flex items-center gap-4 group">
@@ -175,9 +158,9 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <p class="text-sm text-gray-400 uppercase tracking-widest">Email</p>
+                                        <p class=" text-gray-400 uppercase tracking-widest">Email</p>
                                         <a href="mailto:mathieu.moreau.webdev@gmail.com"
-                                            class="text-lg text-[#dbe6cb] hover:text-white transition-colors">mathieu.moreau.webdev@gmail.com</a>
+                                            class="text-blanc hover:text-gray-400 transition-colors">mathieu.moreau.webdev@gmail.com</a>
                                     </div>
                                 </div>
 
@@ -193,8 +176,8 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <p class="text-sm text-gray-400 uppercase tracking-widest">Localisation</p>
-                                        <p class="text-lg text-[#dbe6cb]">Saint-Sauveur, QC</p>
+                                        <p class="text-gray-400 uppercase tracking-widest">Localisation</p>
+                                        <p class="text-blanc">Saint-Sauveur, QC</p>
                                     </div>
                                 </div>
                             </div>
@@ -209,9 +192,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
         </section>

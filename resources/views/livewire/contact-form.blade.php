@@ -15,19 +15,19 @@
         <div class="space-y-6">
             <div class="relative group">
                 <input type="text" wire:model="name" placeholder="Nom"
-                    class="w-full bg-white/5 border border-white/10  px-5 py-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-lime-500/30 focus:border-lime-500 transition-all duration-300 group-hover:border-white/20">
+                    class="w-full bg-blanc border border-white/10 px-5 py-4 text-white placeholder-gray-800 focus:outline-none focus:ring-2 focus:ring-lime-500/30 focus:border-lime-500 transition-all duration-300 group-hover:border-white/20">
                 @error('name') <span class="text-red-400 text-xs mt-1 ml-2">{{ $message }}</span> @enderror
             </div>
 
             <div class="relative group">
                 <input type="email" wire:model="email" placeholder="Courriel"
-                    class="w-full bg-white/5 border border-white/10  px-5 py-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-lime-500/30 focus:border-lime-500 transition-all duration-300 group-hover:border-white/20">
+                    class="w-full bg-blanc border border-white/10  px-5 py-4 text-white placeholder-gray-800 focus:outline-none focus:ring-2 focus:ring-lime-500/30 focus:border-lime-500 transition-all duration-300 group-hover:border-white/20">
                 @error('email') <span class="text-red-400 text-xs mt-1 ml-2">{{ $message }}</span> @enderror
             </div>
 
             <div class="relative group">
                 <textarea wire:model="message" rows="5" placeholder="Message"
-                    class="w-full bg-white/5 border border-white/10  px-5 py-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-lime-500/30 focus:border-lime-500 transition-all duration-300 resize-none group-hover:border-white/20"></textarea>
+                    class="w-full bg-blanc border border-white/10  px-5 py-4 text-white placeholder-gray-800 focus:outline-none focus:ring-2 focus:ring-lime-500/30 focus:border-lime-500 transition-all duration-300 resize-none group-hover:border-white/20"></textarea>
                 @error('message') <span class="text-red-400 text-xs mt-1 ml-2">{{ $message }}</span> @enderror
             </div>
         </div>

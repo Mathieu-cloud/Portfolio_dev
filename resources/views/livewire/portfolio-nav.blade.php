@@ -10,11 +10,11 @@
             }
         }
     }
-}" @scroll.window="spy()" class="fixed top-0 z-50 w-full bg-[#222733]/60 backdrop-blur-md">
+}" @scroll.window="spy()" class="fixed top-0 z-50 w-full bg-background/60 backdrop-blur-md">
 
     <div class="mx-auto px-4 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
-
+            {{-- Icon --}}
             <div class="flex shrink-0 items-center">
                 <a href="/" class="text-xl font-bold text-white tracking-tighter hover:opacity-80 transition-opacity">
                     Avatar
@@ -33,7 +33,7 @@
                         <a :href="'#' + item.id"
                            @click="activeSection = item.id"
                            :class="activeSection === item.id ? 'border-b-2 border-white' : 'border-b-2 border-transparent'"
-                           class="px-3 py-2 text-sm font-medium text-white hover:text-[#22d3ee] transition-all"
+                           class="px-3 py-2 font-heading text-blanc hover:text-[#22d3ee] transition-all"
                            x-text="item.label">
                         </a>
                     </template>
@@ -61,34 +61,34 @@
          x-transition:enter-end="opacity-100 translate-y-0"
          @click.away="open = false"
          class="sm:hidden bg-[#222733]/60 border-t border-white/10">
-        <div class="flex flex-col items-center space-y-1 px-4 pt-2 pb-6">
+        <div class="flex flex-col items-center space-y-1 px-4 pt-2 pb-6 font-heading">
 
             <a href="#hero" @click="open = false; activeSection = 'hero'"
-                :class="activeSection === 'hero' ? ' text-[#22d3ee]' : 'text-white'"
+                :class="activeSection === 'hero' ? ' text-[#22d3ee]' : 'text-blanc'"
                 class="block w-full px-3 py-3 text-center transition-colors">
                 Accueil
             </a>
 
             <a href="#about" @click="open = false; activeSection = 'about'"
-                :class="activeSection === 'about' ? ' text-[#22d3ee]' : 'text-white'"
+                :class="activeSection === 'about' ? ' text-[#22d3ee]' : 'text-blanc'"
                 class="block w-full px-3 py-3 text-center transition-colors">
                 À Propos
             </a>
 
             <a href="#skills" @click="open = false; activeSection = 'skills'"
-                :class="activeSection === 'skills' ? ' text-[#22d3ee]' : 'text-white'"
+                :class="activeSection === 'skills' ? ' text-[#22d3ee]' : 'text-blanc'"
                 class="block w-full px-3 py-3 text-center transition-colors">
                 Compétences
             </a>
 
             <a href="#projects" @click="open = false; activeSection = 'projects'"
-                :class="activeSection === 'projects' ? ' text-[#22d3ee]' : 'text-white'"
+                :class="activeSection === 'projects' ? ' text-[#22d3ee]' : 'text-blanc'"
                 class="block w-full px-3 py-3 text-center transition-colors">
                 Projets
             </a>
 
             <a href="#contact" @click="open = false; activeSection = 'contact'"
-                :class="activeSection === 'contact' ? ' text-[#22d3ee]' : 'text-white'"
+                :class="activeSection === 'contact' ? ' text-[#22d3ee]' : 'text-blanc'"
                 class="block w-full px-3 py-3 text-center transition-colors">
                 Contact
             </a>
