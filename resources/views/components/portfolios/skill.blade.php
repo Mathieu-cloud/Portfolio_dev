@@ -6,7 +6,7 @@
             <div class="p-4 bg-blue-500/10 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-500">
                 <x-icons.front-end class="w-12 h-12 text-blue-400" />
             </div>
-            <x-card-title>Front-end</x-card-title>
+            <x-portfolios.card-title>Front-end</x-portfolios.card-title>
 
             <div class="flex flex-wrap justify-center gap-5">
                 <i class="devicon-html5-plain text-4xl text-gray-400 hover:text-[#E34F26] transition-colors duration-300"
@@ -36,7 +36,7 @@
             <div class="p-4 bg-purple-500/10 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-500">
                 <x-icons.back-end class="w-12 h-12 text-purple-400" />
             </div>
-            <x-card-title>Back-end</x-card-title>
+            <x-portfolios.card-title>Back-end</x-portfolios.card-title>
 
             <div class="flex flex-wrap justify-center gap-5">
                 <i class="devicon-php-plain text-4xl text-gray-400 hover:text-[#777BB4] transition-colors duration-300"
@@ -62,7 +62,7 @@
             <div class="p-4 bg-emerald-500/10 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-500">
                 <x-icons.tools class="w-12 h-12 text-emerald-400" />
             </div>
-            <x-card-title>Outils</x-card-title>
+            <x-portfolios.card-title>Outils</x-portfolios.card-title>
 
             <div class="flex flex-wrap justify-center gap-5">
                 <i class="devicon-git-plain text-4xl text-gray-400 hover:text-[#F05032] transition-colors duration-300"
