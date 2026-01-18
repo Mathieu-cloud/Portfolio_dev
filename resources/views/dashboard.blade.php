@@ -19,7 +19,7 @@
         <hr class="border-gray-800">
 
         <div>
-            <livewire:project-list />
+           <livewire:project-list :isAdmin="true" />
         </div>
     </div>
 </x-layouts.app>
