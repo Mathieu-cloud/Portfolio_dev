@@ -4,7 +4,7 @@
     <x-portfolios.index-nav />
 </header>
 
-<main class="bg-background">
+<main class="bg-red-500">
 
     {{-- Section hero --}}
     <x-portfolios.hero-animation />
