@@ -7,6 +7,9 @@ use Livewire\Component;
 
 class ProjectList extends Component
 {
+
+    public $isAdmin = false;
+
     public function render()
     {
         return view('livewire.project-list', [

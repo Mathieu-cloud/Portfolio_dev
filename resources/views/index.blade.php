@@ -54,7 +54,7 @@
 
         <x-portfolios.section-title> Mes projets </x-portfolios.section-title>
 
-        <livewire:project-list />
+       <livewire:project-list :isAdmin="false" />
 
     </section>
 
