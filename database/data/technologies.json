@@ -15,5 +15,6 @@
     { "nom": "Laravel" },
     { "nom": "git" },
     { "nom": "GitHub" },
-    { "nom": "Livewire" }
+    { "nom": "Livewire" },
+    { "nom": "React"}
 ]
