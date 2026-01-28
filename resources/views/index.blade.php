@@ -54,7 +54,9 @@
 
         <x-portfolios.section-title> Mes projets </x-portfolios.section-title>
 
-        <livewire:project-list :isAdmin="false" />
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <livewire:project-list :isAdmin="false" />
+        </div>
 
     </section>
 
