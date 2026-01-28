@@ -46,6 +46,11 @@
                      title="GitHub">
                  </i>
              </a>
+             <a href="https://www.facebook.com/mathieu.moreau.67488" target="_blank">
+                 <i class="devicon-facebook-plain text-4xl text-gray-400 hover:text-[#3d5a98] transition-colors duration-300"
+                     title="Facebook">
+                 </i>
+             </a>
          </div>
      </div>
  </div>
