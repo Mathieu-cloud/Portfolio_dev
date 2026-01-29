@@ -12,8 +12,8 @@
                  </div>
                  <div>
                      <p class=" text-gray-400 uppercase tracking-widest">Email</p>
-                     <a href="mailto:mathieu.moreau.webdev@gmail.com"
-                         class="text-blanc hover:text-gray-400 transition-colors">mathieu.moreau.webdev@gmail.com</a>
+                     <a href="mailto:mathieu-moreau@hotmail.com"
+                         class="text-blanc hover:text-gray-400 transition-colors">mathieu-moreau@hotmail.com</a>
                  </div>
              </div>
 
