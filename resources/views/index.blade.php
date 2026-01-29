@@ -62,18 +62,13 @@
 
     {{-- Section contact --}}
     <section id="contact"
-        class="flex flex-col items-center justify-start min-h-screen scroll-mt-20 py-16 md:py-24 relative overflow-hidden">
-        <div class="max-w-6xl mx-auto px-6 w-full relative z-10">
+        class="flex flex-col items-center justify-center min-h-screen scroll-mt-20 py-16 md:py-24 relative overflow-hidden bg-[#242936]">
+        <div class="max-w-4xl mx-auto px-6 w-full relative z-10">
 
             <x-portfolios.section-title> Contact </x-portfolios.section-title>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                <div class="relative group">
-                    <livewire:contact-form />
-                </div>
-
+            <div class="flex justify-center">
                 <x-portfolios.contact-link />
-
             </div>
         </div>
     </section>
