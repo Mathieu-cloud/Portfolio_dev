@@ -107,6 +107,7 @@ class ProjetController extends Controller
             'link' => 'nullable|url',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
             'technologies' => 'array',
+            'technologies.*' => 'exists:technologies,id',
         ]);
 
         // 2. Gestion de l'image
