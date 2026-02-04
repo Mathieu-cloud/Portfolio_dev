@@ -28,7 +28,8 @@
                 </div>
                 <div>
                     <p class="text-sm text-gray-400 uppercase tracking-widest mb-1">Localisation</p>
-                    <p class="text-blanc text-lg">Saint-Sauveur, QC</p>
+                    <a href="https://www.google.com/maps/place/Saint-Sauveur,+QC" target="_blank"
+                        class="text-blanc hover:text-blue-400 transition-colors text-lg">Saint-Sauveur, Québec</a>
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@ Portfolio personnel développé avec Laravel 12 et Livewire pour présenter mes 
 - **Backend** : PHP 8.4, Laravel 12
 - **Frontend** : Livewire Volt, Flux, Tailwind CSS 4
 - **Authentification** : Laravel Fortify
-- **Base de données** : SQLite
+- **Base de données** : MySql
 - **Build** : Vite
 
 ## Fonctionnalités
