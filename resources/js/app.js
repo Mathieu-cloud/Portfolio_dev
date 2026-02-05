@@ -1,4 +1,3 @@
-import '@tailwindplus/elements';
 import heroAnimation from './hero';
 
 document.addEventListener('alpine:init', () => {
