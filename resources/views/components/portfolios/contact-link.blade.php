@@ -11,7 +11,7 @@
                     </svg>
                 </div>
                 <div>
-                    <p class="text-sm text-gray-400 uppercase tracking-widest mb-1">Email</p>
+                    <p class="text-sm text-gray-300 uppercase tracking-widest mb-1">Courriel</p>
                     <a href="mailto:mathieu-moreau@hotmail.com"
                         class="text-blanc hover:text-lime-400 transition-colors text-lg">mathieu-moreau@hotmail.com</a>
                 </div>
@@ -27,7 +27,7 @@
                     </svg>
                 </div>
                 <div>
-                    <p class="text-sm text-gray-400 uppercase tracking-widest mb-1">Localisation</p>
+                    <p class="text-sm text-gray-300 uppercase tracking-widest mb-1">Localisation</p>
                     <a href="https://www.google.com/maps/place/Saint-Sauveur,+QC" target="_blank"
                         class="text-blanc hover:text-blue-400 transition-colors text-lg">Saint-Sauveur, Québec</a>
                 </div>
@@ -37,7 +37,7 @@
         {{-- Séparateur --}}
         <div class="flex items-center gap-4 my-8">
             <div class="flex-1 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent"></div>
-            <span class="text-gray-500 text-sm uppercase tracking-wider">Réseaux sociaux</span>
+            <span class="text-gray-300 text-sm uppercase tracking-wider">Réseaux sociaux</span>
             <div class="flex-1 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent"></div>
         </div>
 
