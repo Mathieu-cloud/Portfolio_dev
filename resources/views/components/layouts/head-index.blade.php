@@ -15,6 +15,7 @@
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <style>@font-face{font-family:"devicon";src:url("https://cdn.jsdelivr.net/gh/devicons/devicon@latest/fonts/devicon.woff?qd25fp") format("woff"),url("https://cdn.jsdelivr.net/gh/devicons/devicon@latest/fonts/devicon.ttf?qd25fp") format("truetype");font-weight:normal;font-style:normal;font-display:swap}</style>
     <title>Portfolio</title>
 </head>
 
