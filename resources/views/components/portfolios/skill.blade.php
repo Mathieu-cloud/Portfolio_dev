@@ -9,22 +9,22 @@
             <x-portfolios.card-title>Front-end</x-portfolios.card-title>
 
             <div class="flex flex-wrap justify-center gap-5">
-                <i class="devicon-html5-plain text-4xl text-gray-400 hover:text-[#E34F26] transition-colors duration-300"
-                    title="HTML5"></i>
-                <i class="devicon-css3-plain text-4xl text-gray-400 hover:text-[#1572B6] transition-colors duration-300"
-                    title="CSS3"></i>
-                <i class="devicon-sass-original text-4xl text-gray-400 hover:text-[#CC6699] transition-colors duration-300"
-                    title="Sass"></i>
-                <i class="devicon-tailwindcss-original text-4xl text-gray-400 hover:text-[#06B6D4] transition-colors duration-300"
-                    title="Tailwind CSS"></i>
-                <i class="devicon-javascript-plain text-4xl text-gray-400 hover:text-[#F7DF1E] transition-colors duration-300"
-                    title="JavaScript"></i>
-                <i class="devicon-vuejs-plain text-4xl text-gray-400 hover:text-[#4FC08D] transition-colors duration-300"
-                    title="Vue.js"></i>
-                <i class="devicon-alpinejs-original text-4xl text-gray-400 hover:text-[#8BC0D0] transition-colors duration-300"
-                    title="Alpine.js"></i>
-                <i class="devicon-jquery-plain text-4xl text-gray-400 hover:text-[#0769AD] transition-colors duration-300"
-                    title="jQuery"></i>
+                <x-icons.devicon.html5 class="w-9 h-9 text-gray-400 hover:text-[#E34F26] transition-colors duration-300"
+                    title="HTML5" />
+                <x-icons.devicon.css3 class="w-9 h-9 text-gray-400 hover:text-[#1572B6] transition-colors duration-300"
+                    title="CSS3" />
+                <x-icons.devicon.sass class="w-9 h-9 text-gray-400 hover:text-[#CC6699] transition-colors duration-300"
+                    title="Sass" />
+                <x-icons.devicon.tailwindcss class="w-9 h-9 text-gray-400 hover:text-[#06B6D4] transition-colors duration-300"
+                    title="Tailwind CSS" />
+                <x-icons.devicon.javascript class="w-9 h-9 text-gray-400 hover:text-[#F7DF1E] transition-colors duration-300"
+                    title="JavaScript" />
+                <x-icons.devicon.vuejs class="w-9 h-9 text-gray-400 hover:text-[#4FC08D] transition-colors duration-300"
+                    title="Vue.js" />
+                <x-icons.devicon.alpinejs class="w-9 h-9 text-gray-400 hover:text-[#8BC0D0] transition-colors duration-300"
+                    title="Alpine.js" />
+                <x-icons.devicon.jquery class="w-9 h-9 text-gray-400 hover:text-[#0769AD] transition-colors duration-300"
+                    title="jQuery" />
             </div>
         </div>
     </div>
@@ -39,18 +39,18 @@
             <x-portfolios.card-title>Back-end</x-portfolios.card-title>
 
             <div class="flex flex-wrap justify-center gap-5">
-                <i class="devicon-php-plain text-4xl text-gray-400 hover:text-[#777BB4] transition-colors duration-300"
-                    title="PHP"></i>
-                <i class="devicon-laravel-original text-4xl text-gray-400 hover:text-[#FF2D20] transition-colors duration-300"
-                    title="Laravel"></i>
-                <i class="devicon-csharp-plain text-4xl text-gray-400 hover:text-[#239120] transition-colors duration-300"
-                    title="C#"></i>
-                <i class="devicon-mysql-original text-4xl text-gray-400 hover:text-[#4479A1] transition-colors duration-300"
-                    title="MySQL"></i>
-                <i class="devicon-azuresqldatabase-plain text-4xl text-gray-400 hover:text-[#0089D6] transition-colors duration-300"
-                    title="SQL"></i>
-                <i class="devicon-sqlite-plain text-4xl text-gray-400 hover:text-[#003B57] transition-colors duration-300"
-                    title="SQLite"></i>
+                <x-icons.devicon.php class="w-9 h-9 text-gray-400 hover:text-[#777BB4] transition-colors duration-300"
+                    title="PHP" />
+                <x-icons.devicon.laravel class="w-9 h-9 text-gray-400 hover:text-[#FF2D20] transition-colors duration-300"
+                    title="Laravel" />
+                <x-icons.devicon.csharp class="w-9 h-9 text-gray-400 hover:text-[#239120] transition-colors duration-300"
+                    title="C#" />
+                <x-icons.devicon.mysql class="w-9 h-9 text-gray-400 hover:text-[#4479A1] transition-colors duration-300"
+                    title="MySQL" />
+                <x-icons.devicon.azuresqldatabase class="w-9 h-9 text-gray-400 hover:text-[#0089D6] transition-colors duration-300"
+                    title="SQL" />
+                <x-icons.devicon.sqlite class="w-9 h-9 text-gray-400 hover:text-[#003B57] transition-colors duration-300"
+                    title="SQLite" />
             </div>
         </div>
     </div>
@@ -65,12 +65,12 @@
             <x-portfolios.card-title>Outils</x-portfolios.card-title>
 
             <div class="flex flex-wrap justify-center gap-5">
-                <i class="devicon-git-plain text-4xl text-gray-400 hover:text-[#F05032] transition-colors duration-300"
-                    title="Git"></i>
-                <i class="devicon-github-original text-4xl text-gray-400 hover:text-white transition-colors duration-300"
-                    title="GitHub"></i>
-                <i class="devicon-vscode-plain text-4xl text-gray-400 hover:text-[#007ACC] transition-colors duration-300"
-                    title="VS Code"></i>
+                <x-icons.devicon.git class="w-9 h-9 text-gray-400 hover:text-[#F05032] transition-colors duration-300"
+                    title="Git" />
+                <x-icons.devicon.github class="w-9 h-9 text-gray-400 hover:text-white transition-colors duration-300"
+                    title="GitHub" />
+                <x-icons.devicon.vscode class="w-9 h-9 text-gray-400 hover:text-[#007ACC] transition-colors duration-300"
+                    title="VS Code" />
             </div>
         </div>
     </div>
