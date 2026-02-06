@@ -1,6 +1,7 @@
+import { Livewire, Alpine } from '../../vendor/livewire/livewire/dist/livewire.esm';
 import heroAnimation from './hero';
 
-document.addEventListener('alpine:init', () => {
-    Alpine.data('heroAnimation', heroAnimation);
-});
+Alpine.data('heroAnimation', heroAnimation);
+
+Livewire.start();
 
