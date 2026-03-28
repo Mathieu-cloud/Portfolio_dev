@@ -9,6 +9,10 @@ Route::get('/', function () {
     return view('index');
 })->name('home');
 
+Route::get('/cybersecurites', function () {
+    return view('cybersecurites.index');
+})->name('cybersecurites.index');
+
 Route::get('/admins/projects/create', [ProjetController::class, 'create'])
     ->name('admins.projects.create')
     ->middleware('auth', 'verified');
