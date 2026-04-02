@@ -13,5 +13,11 @@
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
+  },
+  "resources/js/generateur.js": {
+    "file": "assets/generateur-RJLe7SKG.js",
+    "name": "generateur",
+    "src": "resources/js/generateur.js",
+    "isEntry": true
   }
 }
