@@ -57,13 +57,7 @@
                         title="GitHub" />
                 </div>
             </a>
-            <a href="https://www.facebook.com/mathieu.moreau.67488" target="_blank"
-                class="group relative">
-                <div class="w-14 h-14 rounded-2xl bg-gray-700/30 flex items-center justify-center group-hover:bg-[#3d5a98] transition-all duration-300 transform group-hover:scale-110">
-                    <x-icons.devicon.facebook class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors duration-300"
-                        title="Facebook" />
-                </div>
-            </a>
+
         </div>
     </div>
 </div>
