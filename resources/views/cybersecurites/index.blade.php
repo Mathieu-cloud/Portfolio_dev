@@ -8,6 +8,7 @@
     <title>Cybersécurité</title>
     @vite('resources/css/app.css')
     @vite('resources/js/generateur.js')
+    @livewireStyles
 </head>
 
 <body class="bg-[#0a0a0a] text-white">
@@ -22,7 +23,8 @@
         <h1 class="flex-1 text-center text-2xl font-semibold">Cybersécurité</h1>
     </nav>
 
-    <section id="generator" class="flex justify-start items-center min-h-[calc(100vh-4rem)] px-8">
+    <section id="tools" class="flex flex-col lg:flex-row justify-center items-start min-h-[calc(100vh-4rem)] px-8 py-12 gap-8">
+        {{-- Générateur de Mots de Passe --}}
         <div class="w-full max-w-md bg-[#111112] border border-white/10 rounded-sm p-8 space-y-6">
             <h2 class="text-xl font-semibold text-center text-white">Générateur de Mots de Passe</h2>
 
@@ -86,7 +88,12 @@
                 </button>
             </div>
         </div>
+
+        {{-- Headers Security Analyzer --}}
+        <livewire:headers-analyzer />
     </section>
+
+    @livewireScripts
 </body>
 
 </html>
